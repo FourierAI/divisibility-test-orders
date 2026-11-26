@@ -80,9 +80,10 @@ def annotate(archive, destination, revision):
     section = (
         "\\section*{Code and formal verification}\n"
         "Each numbered result links to a record at the same version of the code. "
-        f"Of the {len(claims)} results, {counts['proved']} have a complete proof in Lean, "
-        f"{counts['partial']} have formal proofs of specified steps, and {counts['open']} "
-        "remain open. Proposition 39 is counted in its corrected positive-input formulation. "
+        f"Lean proves {counts['proved']} of the {len(claims)} numbered results in full. "
+        f"For {counts['partial']} further results it verifies specified steps. "
+        f"The remaining {counts['open']} results are open. Proposition 39 is counted in its "
+        "corrected positive-input formulation. "
         "Each partial record states its outstanding obligations. "
         "The index cites the page numbers of the original edition. "
         "The repository also contains the four-prime example, the finite checks, "
