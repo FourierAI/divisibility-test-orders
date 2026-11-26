@@ -27,6 +27,13 @@ jobs:
       - name: Check all proof terms and audit dependencies
         working-directory: lean
         run: lake build
+      - name: Build the information-theoretic proofs with pinned mathlib
+        working-directory: analysis_lean
+        shell: bash
+        run: |
+          mapfile -t modules < <(awk '$1 == "import" && $2 ~ /^Mathlib[.]/ {print $2}' ScreeningAnalysis/*.lean | sort -u)
+          lake exe cache get "${modules[@]}"
+          lake build
   experiments:
     runs-on: ubuntu-24.04
     steps:
