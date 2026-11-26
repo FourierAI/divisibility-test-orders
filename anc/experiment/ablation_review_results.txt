@@ -1,0 +1,3 @@
+seed 91233273  FLINT=129.18  scalar149=129.89  scalar1627=127.77  table_scalar1627=125.25  grouped1627=114.40  full=110.59 ns/input
+seed 41797637  FLINT=130.49  scalar149=131.14  scalar1627=129.19  table_scalar1627=125.83  grouped1627=115.40  full=111.63 ns/input
+seed 69420123  FLINT=128.99  scalar149=129.74  scalar1627=127.44  table_scalar1627=124.62  grouped1627=114.01  full=109.47 ns/input

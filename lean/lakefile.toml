@@ -1,0 +1,11 @@
+name = "screeningProofs"
+version = "0.1.0"
+defaultTargets = ["Screening", "Audit"]
+
+[[lean_lib]]
+name = "Screening"
+moreLeanArgs = ["--trust=0", "-DwarningAsError=true"]
+
+[[lean_lib]]
+name = "Audit"
+moreLeanArgs = ["--trust=0", "-DwarningAsError=true"]

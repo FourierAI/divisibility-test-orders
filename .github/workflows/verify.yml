@@ -1,0 +1,34 @@
+name: Verify proofs and finite checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lean:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install the pinned Lean release
+        shell: bash
+        run: |
+          version=$(sed -n 's|^leanprover/lean4:v||p' lean/lean-toolchain)
+          test -n "$version"
+          toolchain="$RUNNER_TEMP/paper-lean"
+          mkdir -p "$toolchain"
+          curl --fail --location --retry 3 --silent --show-error \
+            "https://github.com/leanprover/lean4/releases/download/v$version/lean-$version-linux.tar.zst" \
+            -o "$RUNNER_TEMP/paper-lean.tar.zst"
+          tar --zstd -xf "$RUNNER_TEMP/paper-lean.tar.zst" --strip-components=1 -C "$toolchain"
+          echo "$toolchain/bin" >> "$GITHUB_PATH"
+      - name: Check all proof terms and audit dependencies
+        working-directory: lean
+        run: lake build
+  experiments:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 tools/check_experiments.py
