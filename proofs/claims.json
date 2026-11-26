@@ -1,0 +1,751 @@
+[
+  {
+    "kind": "theorem",
+    "label": "thm:natural-observation",
+    "source": "natural_observation.tex",
+    "statement_sha256": "ccdd25b51817d6d6571f1995dd318986959a1323b132936582789a1b45a4d4b3",
+    "number": 1,
+    "page": 4,
+    "title": "Information in the count and largest hits",
+    "status": "partial",
+    "checked": "The finite proxy bound uses operational scan costs. The signed family is realized on odd integers under explicit finite interval conditions. For interleaved bins the inversion lower bound follows from a single-swap margin, and the exact expected inversion count under fair signs is verified. The two-law conclusion requires indistinguishable records and a cost gap.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.CostMoments.operational_counted_surrogate_regret"
+      ],
+      [
+        "lean",
+        "Screening.Indistinguishability.paired_laws_lower"
+      ],
+      [
+        "lean",
+        "Screening.PrimeIntervalWitness.paper_signed_family"
+      ],
+      [
+        "lean",
+        "Screening.HardBinRegret.anchor_tail_survival"
+      ],
+      [
+        "lean",
+        "Screening.HardBinRegret.inversion_regret"
+      ],
+      [
+        "lean",
+        "Screening.HardBinRegret.fair_inversion_mean"
+      ]
+    ],
+    "remaining": "Derive the asymptotic prime-bin estimates, the conditional ties and signed cost gap, and the full precision-dependent sample guarantee."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:stopped-trace",
+    "source": "stopped_trace.tex",
+    "statement_sha256": "5e038edcb0e21a7f4d1659c63a92c833b0555c42dc3d2c8a803609b4a45f97ec",
+    "number": 2,
+    "page": 4,
+    "title": "Stopped traces",
+    "status": "partial",
+    "checked": "The probability of a saturated stopped record is derived by inclusion-exclusion; its integer-weight expansion separates the top-degree sum.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.StoppedTrace.saturated_trace_inversion"
+      ],
+      [
+        "lean",
+        "Screening.StoppedTrace.top_degree_trace_sum"
+      ]
+    ],
+    "remaining": "Prove the truncation multiplicity, adaptive information lower bound, and sample rate with all parameters."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:designed-onehit",
+    "source": "stopped_trace.tex",
+    "statement_sha256": "9dcc32642cf627ec13ad1e5e5a61aa2a0d6e0c4837b564b6dc0a739dbb1fa7b3",
+    "number": 3,
+    "page": 5,
+    "title": "Preset first-hit priorities at all sample sizes",
+    "status": "partial",
+    "checked": "The two whole-menu scans and their public randomness define a shared first-hit record. Projecting this record to a chosen pivot gives the local decoder, its exact mean and its second-moment bound.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.OneHitInversion.population_prefix_unbiased"
+      ],
+      [
+        "lean",
+        "Screening.OneHitInversion.observed_second_moment"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.record_projection"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.actual_pivot_mean"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.actual_pivot_energy"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.simultaneous_raw_prefixes"
+      ],
+      [
+        "lean",
+        "Screening.PartitionWindows.pivot_forward_cover"
+      ],
+      [
+        "lean",
+        "Screening.MedianLearner.median_scan_regret"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.literal_prefix_mean"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.literal_prefix_confidence"
+      ]
+    ],
+    "remaining": "Prove the upper and lower minimax envelopes across every sample budget and precision regime."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:natural-messages",
+    "source": "natural_messages.tex",
+    "statement_sha256": "585e32508e714fb478f1d9a805446705a40a494bb9dcb00950f87054eff35fdd",
+    "number": 4,
+    "page": 6,
+    "title": "Selective supplemental messages",
+    "status": "partial",
+    "checked": "Lemma 13 bounds the information in one use of a randomized encoder, including the contribution from silence, for arbitrary measurable marked contents.",
+    "evidence": [
+      [
+        "analysis_lean",
+        "ScreeningAnalysis.MessageKL.encoder_information"
+      ],
+      [
+        "analysis_lean",
+        "ScreeningAnalysis.GeneralMessageKL.product_encoder_information"
+      ]
+    ],
+    "remaining": "Derive the multi-round KL lower bound, hard-family decoding, and the matching message and word upper bounds."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:staged-filters",
+    "source": "staged_filters.tex",
+    "statement_sha256": "95b2036a078f6f3439dcafbc8edbc874c8c6da185c0bdc14626e0c53fabcff76",
+    "number": 5,
+    "page": 8,
+    "title": "Public stages for set cover",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify both minimax statements and their reductions to the staged experiment."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:natural-sparse-pair",
+    "source": "natural_sparse_pair.tex",
+    "statement_sha256": "693afd6b7b1368d1efa90050b6bcfedf231003bd455839cf9a9819857921dd8b",
+    "number": 6,
+    "page": 8,
+    "title": "Sparse second-hit supplements",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Derive the expected disclosure count, polynomial optimizer and regret at the stated precision."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:natural-window",
+    "source": "natural_window.tex",
+    "statement_sha256": "6f4517242c653a251692c063a6f995ec7d122715f46b76fc6800286700a229f0",
+    "number": 7,
+    "page": 9,
+    "title": "Natural arithmetic window and learning threshold",
+    "status": "partial",
+    "checked": "Finite nonadjacent exchange, the reciprocal-gap window, a signed family on actual integers, and rank displacement are checked.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.NaturalWindow.truncated_arithmetic_optimum_window"
+      ],
+      [
+        "lean",
+        "Screening.PrimeIntervalWitness.paper_signed_family"
+      ]
+    ],
+    "remaining": "Instantiate the analytic prime-count bounds and prove the matching statistical minimax rates and running time."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:natural-local-score",
+    "source": "natural_local_score.tex",
+    "statement_sha256": "637943a01277746ccc96ba19009e696e78affc23394f517da5548195ed9dcb18",
+    "number": 8,
+    "page": 12,
+    "title": "Scalar scores at finer accuracy",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the scalar score approximation, training guarantee, and bit complexity."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:natural-precision",
+    "source": "natural_precision.tex",
+    "statement_sha256": "05e666d87a2be3676b1a898ea9ea4a8975e6414c3b1f33cdbb21d58d00a13483",
+    "number": 9,
+    "page": 14,
+    "title": "Natural model at all accuracies",
+    "status": "partial",
+    "checked": "The centered full-order cost is recovered from literal scans and maximal ranks, and the arithmetic window is proved given finite envelopes and interval occupancy.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.CostMoments.centered_cost_eq_trueScore_extended"
+      ],
+      [
+        "lean",
+        "Screening.NaturalWindow.truncated_arithmetic_optimum_window"
+      ]
+    ],
+    "remaining": "Prove the uniform concentration bound, tie construction, confidence lower bounds, and the dynamic program."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:trace-priority-design",
+    "source": "trace_priority_design.tex",
+    "statement_sha256": "190e11110603ddb05daf423b79b9b9b9a2169579ed3b6df191892ea8a2c660bb",
+    "number": 10,
+    "page": 19,
+    "title": "Number of priorities for reconstruction",
+    "status": "partial",
+    "checked": "The Boolean subset inversion that recovers a required containment weight from exclusion queries is checked.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.StoppedTrace.recover_required"
+      ]
+    ],
+    "remaining": "Prove the block incidence ranks, entire preset query design, and adaptive rank lower bound."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:active-one-hit",
+    "source": "local_priorities.tex",
+    "statement_sha256": "1e433c974dfbfb3a2fd800669f279d3012a04e803f98fdf2f9563fe2cb06129e",
+    "number": 11,
+    "page": 20,
+    "title": "Local randomized first-hit learner",
+    "status": "partial",
+    "checked": "The two whole-menu scans and their public randomness define a shared first-hit record. Projecting this record to a chosen pivot gives the local decoder, its exact mean and its second-moment bound. The literal clipped partitions cover the required forward windows. Independent blocks of the same raw records yield a simultaneous finite failure bound. Separately, taking prefix medians and minimizing their sum gives a finite scan-regret bound under uniform block-majority conditions. The decoded expectation coincides with the actual centered survival for every prefix in the displacement band, including empty-hit words.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.OneHitInversion.population_prefix_unbiased"
+      ],
+      [
+        "lean",
+        "Screening.OneHitInversion.local_prefix_concentration"
+      ],
+      [
+        "lean",
+        "Screening.OneHitInversion.two_shift_cover"
+      ],
+      [
+        "lean",
+        "Screening.SampleVariance.block_means_amplified"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.record_projection"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.actual_pivot_mean"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.actual_pivot_energy"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.simultaneous_raw_prefixes"
+      ],
+      [
+        "lean",
+        "Screening.PartitionWindows.pivot_forward_cover"
+      ],
+      [
+        "lean",
+        "Screening.MedianLearner.median_scan_regret"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.literal_prefix_mean"
+      ],
+      [
+        "lean",
+        "Screening.GlobalOneHit.literal_prefix_confidence"
+      ]
+    ],
+    "remaining": "Connect the centered physical-prefix numerators and their common denominators to the uncentered median scan-cost theorem for all candidate plans. Extend finite rational populations to arbitrary real laws and derive the final rounded sample and confidence rates."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:designed-onehit-lower",
+    "source": "designed_onehit_lower.tex",
+    "statement_sha256": "f2ea4f10297de99e6482e3e4d0edecdec29cdda2982b7f07469ff08b5c24de08",
+    "number": 12,
+    "page": 23,
+    "title": "Lower bound for preset priorities",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the lower bounds for all precisions with the stated protocol and confidence."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:natural-message-kl",
+    "source": "supplements_proof.tex",
+    "statement_sha256": "7a8988c253efad823b21046de06e1085f2bad21321b5d9a8e357adea5a60bc11",
+    "number": 13,
+    "page": 26,
+    "title": "Information per supplemental message",
+    "status": "proved",
+    "checked": "For the free record of this paper (a count and finitely many indices), the 4η² P(send) bound holds for every common retaining randomized encoder. The proof uses actual KL divergence and an arbitrary measurable space for marked contents. It integrates over both silence and marked outputs. The implementation permits any countable free-record alphabet with measurable singletons.",
+    "evidence": [
+      [
+        "analysis_lean",
+        "ScreeningAnalysis.MessageKL.encoder_information"
+      ],
+      [
+        "analysis_lean",
+        "ScreeningAnalysis.GeneralMessageKL.product_encoder_information"
+      ]
+    ],
+    "remaining": ""
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:rounded-moments",
+    "source": "rounded_lower.tex",
+    "statement_sha256": "5c244efc13f5ae7f5ebeff2205380f238cdbfba52e7762cb375fbd4362962c11",
+    "number": 14,
+    "page": 28,
+    "title": "Rounded lower moments",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Establish all degree-dependent upper and lower radii with a single confidence parameter."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:rounded-messages",
+    "source": "rounded_messages.tex",
+    "statement_sha256": "c74e496730f02b2be6c8b4ca722c1478c285d2ec60fd00d8321d3bbb7709008e",
+    "number": 15,
+    "page": 30,
+    "title": "Rounded precision and message budgets",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Combine truncated observation layers, separate budgets and the matching hard laws."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:prime-blocks",
+    "source": "natural_blocks.tex",
+    "statement_sha256": "ebc0075de50ab4de88dc8d01112aa5dbb79fdf0bfb8824e58f73e4e2472279fd",
+    "number": 16,
+    "page": 33,
+    "title": "Separated prime bins",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the analytic prime estimates and construct the required separated bins in polynomial time."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:natural-pair-learner",
+    "source": "natural_pair_learning.tex",
+    "statement_sha256": "3efae074b4dd2ed177f3c755393663efee68d064bcac901f8da132337b0359e9",
+    "number": 17,
+    "page": 33,
+    "title": "Polynomial learner from pairs",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify accuracy, semidefinite sampling bounds, optimizer, and the full batch running time."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:natural-deterministic",
+    "source": "natural_deterministic.tex",
+    "statement_sha256": "58008617616857bca91244796af112bc1558958e6afda3ac61db2fdc559bfd53",
+    "number": 18,
+    "page": 35,
+    "title": "Deterministic pair optimization",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify deterministic optimization and its complexity at the stated precision."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:natural-rank-repair",
+    "source": "natural_rank_repair.tex",
+    "statement_sha256": "ee35f285791496aa33c40da4d8c10a0fe7fd3077be21e012ebd5bcf0da806c0a",
+    "number": 19,
+    "page": 38,
+    "title": "Repair of bucket counts",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Formalize both cost bounds, rank repairs and preservation of all promised precedences."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:natural-multiscale",
+    "source": "natural_multiscale.tex",
+    "statement_sha256": "ed2f4be60bd4ab81d9ded86bbc883b13f2dd64d8193e5fc93a30dfde31722f6e",
+    "number": 20,
+    "page": 39,
+    "title": "Sampling rank-dependent potentials",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the multiscale uniform error and coding length for all receiving rows."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:natural-pair-dp",
+    "source": "natural_pair_dp.tex",
+    "statement_sha256": "14ae0790fc48e4aaaa22be54bee2ab9b3cd8c4d58bab2ae8f02f3dcc794bb134",
+    "number": 21,
+    "page": 41,
+    "title": "Dynamic programming for pair cost",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify the state representation, cost approximation and complexity bounds."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:natural-low-rank",
+    "source": "natural_low_rank.tex",
+    "statement_sha256": "93c9c6c3c01395c5c2547f62babe426e2601e9237801b8ff3796c49b87fbf3b7",
+    "number": 22,
+    "page": 43,
+    "title": "Low-rank endpoint",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the spectral approximation and state-count estimates for the optimizer."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:sparse-spectral",
+    "source": "sparse_spectral.tex",
+    "statement_sha256": "924d5201f05327dd089ddfe8a00ddbb9eb80b77c2f4291666ccf7d83415084cc",
+    "number": 23,
+    "page": 45,
+    "title": "Estimating the local spectrum",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the simultaneous spectral remainder and sample complexity bounds."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:natural-field-limit",
+    "source": "natural_field_limit.tex",
+    "statement_sha256": "0894152d73883482df06bd06f9c070f7f127ad6296de75127cf12e65149f05ac",
+    "number": 24,
+    "page": 46,
+    "title": "Lower bound on row-potential lists",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the separated coding construction and expected output-size lower bound."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:natural-field-realization",
+    "source": "natural_field_realization.tex",
+    "statement_sha256": "f6fd58e3fd6fba167d28a782951668ec4395eb38480dac19fae8f273a96eab13",
+    "number": 25,
+    "page": 48,
+    "title": "Arithmetic realization of row potentials",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify that the packed fields are realized with the specified arithmetic bounds."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:natural-np",
+    "source": "natural_np.tex",
+    "statement_sha256": "5d221bef31a0fa2ce5b005ecc0dbe2dc8753b1fcbdbf52e0a8c71063455cd788",
+    "number": 26,
+    "page": 49,
+    "title": "NP-hardness of the natural ordering problem",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Formalize the source hardness assumption, polynomial reduction and extraction of a graph order."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:gapeth",
+    "source": "natural_gapeth.tex",
+    "statement_sha256": "79ae7f0f210c181afc82c67763c40e5bd6081486b4593cd1d9003613a671379a",
+    "number": 27,
+    "page": 51,
+    "title": "Gap-ETH limit for natural inputs",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the promise-gap translation, instance growth and time bounds."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:structured-endpoint",
+    "source": "structured_endpoint.tex",
+    "statement_sha256": "a8db7e4a43c5052c2f36080e916ff8f8fa3c25ddc1ae093d147652e4ee4e549c",
+    "number": 28,
+    "page": 53,
+    "title": "Matched budgets on a structured class",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Assemble the statistical and computational upper/lower bounds on the same class."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:accuracy-gap",
+    "source": "natural_hard.tex",
+    "statement_sha256": "6dc88a71004ce94539bc3fdab9a38603cfbdd46354a59f70e10cbe9e89525073",
+    "number": 29,
+    "page": 54,
+    "title": "Fine-accuracy noisy-parity reduction",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the distribution-preserving reduction, error calibration and resource bounds."
+  },
+  {
+    "kind": "lemma",
+    "label": "lem:embed",
+    "source": "screening_orders.tex",
+    "statement_sha256": "42a9a4af8b14c844436701a3552e12433fa8a1709077f5b7aa104db56446ba0b",
+    "number": 30,
+    "page": 60,
+    "title": "Embedding equalized marginals",
+    "status": "partial",
+    "checked": "The signed-cube preservation of lower moments and the uniform lifting of finite rational cell probabilities to individual words are checked.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.MomentCube.superposition_preserves_lower"
+      ],
+      [
+        "lean",
+        "Screening.CellLift.lift_rational_cell_law"
+      ]
+    ],
+    "remaining": "Construct the equalized reference and check its quantitative closeness and every hypothesis for this different prime interval."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:sample",
+    "source": "screening_orders.tex",
+    "statement_sha256": "0b6555d49e4bea117c9f938919cb931386135f830c7e38394bad60578c4901f5",
+    "number": 31,
+    "page": 60,
+    "title": "Equalized sample complexity",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the matching learning curves for the equalized model."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:xor",
+    "source": "paired_parity.tex",
+    "statement_sha256": "244dc938c27395bdbd2e6f12e67c15251ee268c2f6e8168eb8c7fb69fa7f07b1",
+    "number": 32,
+    "page": 62,
+    "title": "Parity learning equivalence",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify both reductions and their exact change in resource parameters."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:calibration",
+    "source": "median_calibration.tex",
+    "statement_sha256": "e3bf666579e4ba018296402d12b90bd619dad3d4e113f3c1c6c1ff70b61b1ec0",
+    "number": 33,
+    "page": 64,
+    "title": "Midpoint decoding calibration",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the full two-sided calibration and both sharpness examples."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:lcd",
+    "source": "parity_section.tex",
+    "statement_sha256": "7e51356e90c688fd3b263712f01f0834421ecb6b36006216ff61199a40253288",
+    "number": 34,
+    "page": 65,
+    "title": "Low-degree detection bound",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Establish the low-degree likelihood bound under the stated limiting condition."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:tensor",
+    "source": "tensor_algorithm.tex",
+    "statement_sha256": "e62637a98f5f669a9ee367f397647f1a8048508f7af9a6087d0b2b0cd444d270",
+    "number": 35,
+    "page": 66,
+    "title": "Even-arity polynomial learner",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the flattening estimator, rounding, regret and polynomial complexity."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:odd",
+    "source": "odd_tensor.tex",
+    "statement_sha256": "322b2563ca609b068c92168891d7bd1d27fc60c1ac5fb3ed18e9e7839d8fcc16",
+    "number": 36,
+    "page": 67,
+    "title": "Odd-arity polynomial learner",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Prove the odd-arity estimator and its stated complexity."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:logfree",
+    "source": "sourcecert.tex",
+    "statement_sha256": "f7e24035d91c90b8efe492cbc996ebab30be19c2a720ae9bf9e278522f56a8be",
+    "number": 37,
+    "page": 69,
+    "title": "Log-free odd-arity budget",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify the cited algorithm interface and reduction yielding the improved budget."
+  },
+  {
+    "kind": "proposition",
+    "label": null,
+    "source": "screening_orders.tex",
+    "statement_sha256": "b5c916ba187c32769c05d45085e7bedd752068133a6c3e86a5c5936651848c2e",
+    "number": 38,
+    "page": 70,
+    "title": "Hardness with an explicit histogram",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify the min-sum vertex-cover reduction and the approximation-scheme implication."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:relative",
+    "source": "screening_orders.tex",
+    "statement_sha256": "9a7658fddffa1c91495748e6a105651bea3b9bde8f6d84d90b48810213eb02ff",
+    "number": 39,
+    "page": 70,
+    "title": "Relative cost of a cutoff",
+    "status": "partial",
+    "checked": "The linked edition explicitly restricts the support to consecutive positive odd integers. Taken literally on signed integers, with proper factors defined by 1 < p < |w|, the printed condition on the largest input admits a counterexample. For L=2 take the uniform distribution on −3M and −3M+2, with M the product of the m distinct odd menu primes. Each prime has hit probability 1/2. With fallback cost 3, the full scan costs (m+4)/2 and a singleton is optimal at 5/2. Lean constructs menus of arbitrary size. For positive odd inputs a separate finite proof bounds the two-prime hit probability and proves both the optimal independent cutoff and a quantitative transfer to actual scan costs under finite survival brackets.",
+    "evidence": [
+      [
+        "lean",
+        "Screening.SignedCutoffCounterexample.menus_exist"
+      ],
+      [
+        "lean",
+        "Screening.SignedCutoffCounterexample.interval_conditions"
+      ],
+      [
+        "lean",
+        "Screening.SignedCutoffCounterexample.hits_exactly_first"
+      ],
+      [
+        "lean",
+        "Screening.SignedCutoffCounterexample.optimal_costs"
+      ],
+      [
+        "lean",
+        "Screening.SignedCutoffCounterexample.no_uniform_factor"
+      ],
+      [
+        "lean",
+        "Screening.PositiveCutoff.pair_probability_bound"
+      ],
+      [
+        "lean",
+        "Screening.PositiveCutoff.independent_cutoff"
+      ],
+      [
+        "lean",
+        "Screening.PositiveCutoff.relative_cutoff_transfer"
+      ]
+    ],
+    "remaining": "Prove the prime-count estimate and combine all finite bounds to derive the stated logarithmic asymptotic ratio on the corrected positive domain."
+  },
+  {
+    "kind": "proposition",
+    "label": "prop:cutoff-sharp",
+    "source": "cutoff_lower.tex",
+    "statement_sha256": "9ddc356cd7fba746c7f6161f6b236f67bc1237dc50a5d35b7103450e0a300a66",
+    "number": 40,
+    "page": 71,
+    "title": "Sharpness of the cutoff rate",
+    "status": "partial",
+    "checked": "For the two stated pair-survival laws with Bq=1, Lean derives each cutoff cost from the prefix sum. For any probability weights on cutoffs it proves the worst expected excess against the two feasible endpoint actions is at least half the separation. Comparing to the respective optima only increases that excess.",
+    "evidence": [
+      [
+        "analysis_lean",
+        "ScreeningAnalysis.Cutoff.signed_cost"
+      ],
+      [
+        "analysis_lean",
+        "ScreeningAnalysis.Cutoff.randomized_cutoff_gap"
+      ]
+    ],
+    "remaining": "Instantiate the admissible equalized pair-hit laws on words and the asymptotic positive separation relative to the optimal costs."
+  },
+  {
+    "kind": "theorem",
+    "label": "thm:planted",
+    "source": "planted_section.tex",
+    "statement_sha256": "caf0b5a71c2b2a96e7418eb6f32b89a609dbc95c9f063b490593577dc48f0680",
+    "number": 41,
+    "page": 71,
+    "title": "Planted sparse pair family",
+    "status": "open",
+    "checked": "",
+    "evidence": [],
+    "remaining": "Verify the information bounds, learner, and planted-clique implication under their stated hypotheses."
+  }
+]

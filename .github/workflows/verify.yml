@@ -27,6 +27,8 @@ jobs:
       - name: Check all proof terms and audit dependencies
         working-directory: lean
         run: lake build
+      - name: Check the single-file edition
+        run: lean --trust=0 -DwarningAsError=true FirstPaperProofs.lean
       - name: Build the information-theoretic proofs with pinned mathlib
         working-directory: analysis_lean
         shell: bash
@@ -39,3 +41,5 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - run: python3 tools/check_experiments.py
+      - run: python3 tools/proof_index.py
+      - run: python3 tools/standalone.py
